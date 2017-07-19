@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="{{asset('admins')}}/style/css/ch-ui.admin.css">
+	<link rel="stylesheet" href="{{asset('admins/style')}}/css/ch-ui.admin.css">
 	<link rel="stylesheet" href="{{asset('admins')}}/style/font/css/font-awesome.min.css">
 	<script type="text/javascript" src="{{asset('admins')}}/style/js/jquery.js"></script>
     <script type="text/javascript" src="{{asset('admins')}}/style/js/ch-ui.admin.js"></script>
@@ -19,7 +19,7 @@
 		</div>
 		<div class="top_right">
 			<ul>
-				<li>管理员：admin</li>
+				{{--<li>管理员：{{Auth::guard('admin')->user()->name}}</li>--}}
 				<li><a href="pass.html" target="main">修改密码</a></li>
 				<li><a href="#">退出</a></li>
 			</ul>
@@ -61,7 +61,7 @@
 
 	<!--主体部分 开始-->
 	<div class="main_box">
-		<iframe src="{{url('admin/info')}}" frameborder="0" width="100%" height="100%" name="main"></iframe>
+		<iframe src="{{url('admin/info')}}" frameborder="0" width="100%" height="100%" name="main"></iframe> 
 	</div>
 	<!--主体部分 结束-->
 
